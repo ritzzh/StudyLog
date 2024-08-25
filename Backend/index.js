@@ -49,7 +49,6 @@ app.get("/getdata", async (req, res) => {
 
   app.post("/data", async (req, res) => {
     const { jellyList, ritzzhList } = req.body;
-  
     try {
       await Task.findOneAndUpdate(
         { name: "Jelly" },
