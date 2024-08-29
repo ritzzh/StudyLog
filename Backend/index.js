@@ -65,7 +65,6 @@ app.post("/send-otp", async (req, res) => {
     const otp = Math.floor(100000 + Math.random() * 900000); // Generate a 6-digit OTP
     otps[email] = otp;
 
-    console.log(otp, email)
     const mailOptions = {
       from: process.env.EMAIL_USER,
       to: email,
